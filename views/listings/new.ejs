@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate") -%>
+   <!--  <h2> add new listing</h2>
+    <div class="row">
+       <div class="col-8 offset">
+    <form method="post" action="/listings">
+        <div>
+            <label for="title" class="form-label">title</label>
+        <input  class="form-control" type="text" name="listing[title]" placeholder="enter name of the property">
+        <div class="col-8 offset-2"> -->
+            <h2>Add New Listing</h2>
+            <form method="POST" action="/listings" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input class="form-control" type="text" name="listing[title]" placeholder="enter name of the property" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" name="listing[description]" placeholder="describe your place" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image URL</label>
+                    <input class="form-control" type="text" name="listing[image]" placeholder="enter image URL">
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="image" class="form-label">Image URL</label>
+                    <input class="form-control" type="file" name="listing[image][url]" placeholder="enter image url">
+                </div> -->
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input class="form-control" type="number" name="listing[price]" placeholder="enter price" required>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input class="form-control" type="text" name="listing[location]" placeholder="enter location" required>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input class="form-control" type="text" name="listing[country]" placeholder="enter country" required>
+                </div>
+                <button class="btn btn-dark add-btn">Add</button>
+            </form>
+        </div>
+       <!--  <br><br>
+        <div>
+                    <label for="description" class="form-label">description</label>
+                    <textarea  class = "form-control" type="text" ame="listing[description]" placeholder="descripe your place"></textarea>
+        </div>
+        <br> <br>
+        <div>
+            <label for="image" class="form-label">image</label>
+        <input class="form-control" type="text" name="listing[image][url]" placeholder="enter image url ">
+        </div>
+        <br><br>
+        <div>
+            <label for="price" class="form-label">price</label>
+        <input class="form-control" type="number" name="listing[price]" placeholder="enter price">
+        </div>
+        <br><br>
+        <div>
+             <label for="location" class="form-label">location</label>
+        <input class="form-control" type="text" name="listing[location]" placeholder="enter location">
+        </div>
+        <br><br>
+        <div>
+            <label for="country" class="form-label">country</label>
+        <input class="form-control" type="text" name="listing[country]" placeholder="enter country">
+        </div>
+        <br><br>
+        <button class="btn-btn-dark add-btn">upload</button>
+    </form>
+    </div>
+    </div> 
+</body> -->

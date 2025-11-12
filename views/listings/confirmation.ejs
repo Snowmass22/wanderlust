@@ -1,0 +1,19 @@
+<% layout("/layouts/boilerplate") -%>
+    <div class="confirmation-container col-8 offset-3">
+        <div class="icon-circle">
+            <i class="fas fa-check"></i>
+        </div>
+
+        <h1>Booking Confirmed!</h1>
+        <p class="message">Your reservation has been successfully placed. A confirmation email has been sent to your inbox.</p>
+
+        <div class="details-box">
+            <h2>Your Details</h2>
+            <p><strong>Confirmation ID:</strong> <%= order._id %></p>
+            <p><strong>Service:</strong> <%= listing.title %></p>
+            <p><strong>Date/Time:</strong> <%= order.checkin %> - <%= order.checkout %></p>
+        </div>
+
+        <a href="/listings" class="button-home">Go to Home</a>
+    </div>
+ 

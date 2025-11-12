@@ -1,0 +1,30 @@
+<% layout("/layouts/boilerplate") -%>
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h3>Book "<%= listing.title %>"</h3>
+        <form method="POST" action="/listings/<%= listing._id %>/book" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label for="checkin" class="form-label">Check-in Date</label>
+                <input name="order[checkin]" type="date" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="checkout" class="form-label">Check-out Date</label>
+                <input name="order[checkout]" type="date" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input name="order[phone]" placeholder="Enter your phone number" type="tel" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="verification" class="form-label">Verification (e.g., ID number)</label>
+                <input name="order[verfication]" placeholder="Enter verification details" type="text" class="form-control" required>
+            </div>
+
+            <button class="btn btn-dark edit-btn mt-3">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+<script src="/js/script.js"></script>

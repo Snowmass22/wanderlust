@@ -1,0 +1,314 @@
+/* Basic Reset & Body Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(to right, rgb(0, 115, 255) , rgb(232, 232, 222)); /* Main background color */
+    color: #333;
+    /* Apply background to the entire page */
+    background-image: url('https://images.unsplash.com/photo-1549247796-5d8f09e9034b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background from scrolling */
+    color:blue; /* Change default text color to be visible on the dark image */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #00bcd4;
+}
+
+.navbar .logo img {
+    height: 30px; /* Adjust as needed for your logo */
+    margin-right: 10px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #00bcd4;
+}
+
+.navbar .user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .user-actions i {
+    font-size: 1.8em;
+    color: #555;
+    margin-right: 15px;
+}
+
+.navbar .btn-login {
+    background-image: linear-gradient(to right, rgb(0, 115, 255) , rgb(232, 232, 222));
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn-login:hover {
+     background-image: linear-gradient(to right, rgb(0, 115, 255) , rgb(232, 232, 222));
+     
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1549247796-5d8f09e9034b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=600'); /* This should be the main large background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    background-color: transparent; /* Make hero section transparent */
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    min-height: 70vh;
+    overflow: hidden; /* To contain the wavy bottom and carousel */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Height of the wave */
+     
+    background-size: cover;
+    z-index: 1; /* Ensure wave is above content if needed, below main text */
+}
+
+.hero-content {
+    max-width: 600px; /* Increased width slightly */
+    text-align: center; /* Center the text inside the container */
+    z-index: 5;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.btn-find-out-more {
+    background-image: linear-gradient(to right, rgb(0, 115, 255) , rgb(232, 232, 222));
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-find-out-more:hover {
+    background-image: linear-gradient(to right, rgb(0, 115, 255) , rgb(232, 232, 222));}
+
+/* Search Bar Section */
+.search-bar {
+    background-color: #fff;
+    padding: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin: -60px auto 50px auto; /* Pulls it up over the hero section */
+    position: relative;
+    z-index: 10; /* Ensure it's above other content */
+    max-width: 1000px; /* Adjust width as needed */
+}
+
+.search-bar .container {
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.search-bar .input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 220px; /* Minimum width for input groups */
+}
+
+.search-bar .input-group label {
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.search-bar .input-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+}
+
+.search-bar .input-field span {
+    margin-right: 10px;
+    color: #00bcd4;
+    font-size: 1.1em;
+}
+
+.search-bar .input-field select,
+.search-bar .input-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 1em;
+    color: #333;
+    padding: 5px 0;
+}
+
+.search-bar .input-field select option {
+    color: #333;
+}
+
+.search-bar .btn-search {
+    background-image: linear-gradient(to right, rgb(0, 115, 255) , rgb(232, 232, 222));
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /* Aligns button to the bottom if inputs are taller */
+    min-width: 150px;
+}
+
+.search-bar .btn-search:hover {
+    background-color: #00a4bd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .navbar .nav-links {
+        display: none; /* Hide for smaller screens, could add a hamburger menu */
+    }
+
+    .hero-content { 
+        max-width: 100%; 
+        padding: 0 20px; 
+    }
+
+    .hero-section::before {
+        height: 100px;
+    }
+
+    .search-bar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar .input-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-bar .btn-search {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .btn-find-out-more {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .navbar .logo {
+        font-size: 1em;
+    }
+
+    .navbar .logo img {
+        height: 25px;
+    }
+
+    .navbar .user-actions i {
+        font-size: 1.5em;
+    }
+
+    .navbar .btn-login {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-section {
+        padding: 80px 0;
+    }
+
+    .search-bar {
+        margin: -40px auto 30px auto;
+        padding: 20px 15px;
+    }
+}
